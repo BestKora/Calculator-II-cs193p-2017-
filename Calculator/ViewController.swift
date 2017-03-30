@@ -50,16 +50,20 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    var displayResult: (result: Double?, isPending: Bool, description: String) = (nil, false," "){
-        // Наблюдатель Свойства модифицирует две IBOutlet метки
+    var displayResult: (result: Double?, isPending: Bool,
+                       description: String, error: String?) = (nil, false," ", nil){
+        
+        // Наблюдатель Свойства модифицирует три IBOutlet метки
         didSet {
-            displayValue = displayResult.result
-            if displayResult.result == nil && displayResult.description == " "{
-                displayValue = 0
+            switch displayResult {
+                case (nil, _, " ", nil) : displayValue = 0
+                case (let result, _,_,nil): displayValue = result
+                case (_, _,_,let error): display.text = error!
             }
+            
             history.text = displayResult.description != " " ?
-                displayResult.description + (displayResult.isPending ? " …" : " =") : " "
+                    displayResult.description + (displayResult.isPending ? " …" : " =") : " "
+        //    print ("description = NN\(displayResult.description)NN")
             displayM.text = formatter.string(from: NSNumber(value:variableValues["M"] ?? 0))
         }
     }
@@ -106,7 +110,6 @@ class ViewController: UIViewController {
             guard !display.text!.isEmpty else { return }
             display.text = String (display.text!.characters.dropLast())
             if display.text!.isEmpty{
-                displayValue = 0
                 userInTheMiddleOfTyping = false
                 displayResult = brain.evaluate(using: variableValues)
             }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E41B84E51E755EBB00BEF062 /* Hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = E41B84E41E755EBB00BEF062 /* Hippo.png */; };
-		E423D0501E8BE8DD00E21D38 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423D04F1E8BE8DD00E21D38 /* CalculatorTests.swift */; };
 		E423D05E1E8BE8FF00E21D38 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423D05D1E8BE8FF00E21D38 /* CalculatorUITests.swift */; };
 		E423D0661E8BEB4200E21D38 /* CalculatorBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423D0651E8BEB4200E21D38 /* CalculatorBrainTests.swift */; };
 		E42BAC161E6356FF0005C63C /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BAC151E6356FF0005C63C /* CalculatorBrain.swift */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		E41B84E41E755EBB00BEF062 /* Hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippo.png; sourceTree = "<group>"; };
 		E423D04D1E8BE8DD00E21D38 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E423D04F1E8BE8DD00E21D38 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		E423D0511E8BE8DD00E21D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E423D05B1E8BE8FF00E21D38 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E423D05D1E8BE8FF00E21D38 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				E423D0651E8BEB4200E21D38 /* CalculatorBrainTests.swift */,
-				E423D04F1E8BE8DD00E21D38 /* CalculatorTests.swift */,
 				E423D0511E8BE8DD00E21D38 /* Info.plist */,
 			);
 			path = CalculatorTests;
@@ -281,7 +278,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E423D0661E8BEB4200E21D38 /* CalculatorBrainTests.swift in Sources */,
-				E423D0501E8BE8DD00E21D38 /* CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

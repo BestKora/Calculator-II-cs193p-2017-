@@ -217,6 +217,18 @@ class CalculatorBrainTests: XCTestCase {
         XCTAssertTrue(abs(testBrain.evaluate().result! - 12.5663706143592) < 0.0001)
     }
     
+    func testDescriptionTask7() {
+        var testBrain = CalculatorBrain()
+        // k. 4 × π = would show “4 × π =“ (12.5663706143592 in the display)
+        testBrain.setOperand(4)
+        testBrain.performOperation("×")
+        testBrain.performOperation("π")
+        testBrain.performOperation("=")
+        XCTAssertEqual(testBrain.evaluate().description, "4 × π")
+        XCTAssertFalse(testBrain.evaluate().isPending)
+        XCTAssertTrue(abs(testBrain.evaluate().result! - 12.5663706143592) < 0.0001)
+    }
+    
     func testMissingParenthesisBug() {
         var testBrain = CalculatorBrain()
         

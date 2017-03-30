@@ -318,6 +318,10 @@ class CalculatorUITests: XCTestCase {
         XCTAssert(app.staticTexts["73"].exists)
         app.buttons["="].tap() // clear display
         
+    }
+    func testSequenceTask71() {
+        let app = XCUIApplication()
+        
         // k. 4 × π = would show “4 × π =“ (12.5663706143592 in the display)
         app.buttons["4"].tap()
         app.buttons["×"].tap()
@@ -325,6 +329,7 @@ class CalculatorUITests: XCTestCase {
         app.buttons["="].tap()
         XCTAssert(app.staticTexts["4 × π ="].exists)
         XCTAssert(app.staticTexts["12.566371"].exists)
+
     }
     
     func testClearButtonTask8() {
