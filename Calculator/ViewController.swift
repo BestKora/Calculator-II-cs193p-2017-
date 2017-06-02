@@ -100,6 +100,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearAll(_ sender: UIButton) {
+        userInTheMiddleOfTyping = false
         brain.clear()
         variableValues = [:]
         displayResult = brain.evaluate()
